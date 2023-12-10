@@ -1,5 +1,5 @@
 FROM centos:centos7.9.2009
-MAINTAINER khanrizwanrk147@gmail
+MAINTAINER khanrizwanrk147@gmail.com
 RUN yum install -y httpd \ 
 zip \
 unzip
