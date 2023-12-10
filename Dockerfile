@@ -1,6 +1,12 @@
-Hello World v1
-Hello World v2
-Hello World v3
-Hello World v4
-Hello World v5
-Hello World v6
+FROM centos:latest
+MAINTAINER khanrizwanrk147@gmail
+RUN YUM install -y httpd \ 
+zip \
+unzip
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /var/www/html
+WORKDIR /var/www/html
+RUN unzip oxer.zip
+RUN cp -rvf markups-oxer/*
+RUN rm -rf _MACOSX markups-oxer oxer.zip
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 80
