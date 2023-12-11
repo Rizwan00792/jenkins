@@ -1,4 +1,4 @@
-FROM amazonlinux:latest
+FROM rockylinux:9.3.20231119
 MAINTAINER khanrizwanrk147@gmail.com
 RUN yum install -y httpd \
 zip \
