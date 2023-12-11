@@ -1,4 +1,4 @@
-FROM centos:centos7.9.2009
+FROM amazonlinux:latest
 MAINTAINER khanrizwanrk147@gmail.com
 RUN yum install -y httpd \
 zip \
