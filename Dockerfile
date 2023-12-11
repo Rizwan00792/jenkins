@@ -7,6 +7,5 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/fi
 WORKDIR /var/www/html
 RUN unzip finexo.zip
 RUN cp -rvf finexo-html/*
-RUN rm -rf _MACOSX oxer-html oxer.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
