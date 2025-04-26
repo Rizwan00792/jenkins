@@ -1,18 +1,10 @@
 FROM rockylinux/rockylinux:9
-
-LABEL maintainer="khanrizwanrk147@gmail.com"
-
-RUN dnf install -y httpd zip unzip && dnf clean all
-
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page294/shapel.zip /var/www/html/
-
+MAINTAINER khanrizwanrk147@gmail.com
+RUN yum install -y httpd zip unzip && yum clean all
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/listrace.zip /var/www/html/
 WORKDIR /var/www/html
-
-RUN unzip shapel.zip && \
-    mv shapel-html-*/* . && \
-    rm -rf shapel.zip shapel-html-*
-
-
+RUN unzip listrace.zip && \
+    cp -rvf listrace-*/* . && \
+    rm -rf listrace.zip listrace-*
 EXPOSE 80
-
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
