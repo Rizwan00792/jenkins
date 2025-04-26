@@ -5,6 +5,6 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/me
 WORKDIR /var/www/html
 RUN unzip mediplus*.zip && \
     cp -rvf mediplus*/* . && \
-    rm -rf mediplus*.zip listrace-*
+    rm -rf mediplus*.zip mediplus-*
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
