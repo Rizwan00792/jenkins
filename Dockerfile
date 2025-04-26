@@ -5,6 +5,6 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/sp
 WORKDIR /var/www/html
 RUN unzip spering.zip && \
     cp -rvf spering-*/* . && \
-    rm -rf spering.zip listrace-*
+    rm -rf spering.zip spering-*
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
