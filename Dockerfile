@@ -1,6 +1,6 @@
 FROM rockylinux/rockylinux:9
 MAINTAINER khanrizwanrk147@gmail.com
-RUN yum install -y httd \
+RUN yum install -y httpd \
 zip \
 unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/listrace.zip /var/www/html
