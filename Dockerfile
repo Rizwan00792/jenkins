@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM rockylinux/rockylinux:9-ubi-micro
 MAINTAINER khanrizwanrk147@gmail.com
 RUN yum install -y httd \
 zip \
