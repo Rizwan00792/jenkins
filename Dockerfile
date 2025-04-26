@@ -9,8 +9,9 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page294/sh
 WORKDIR /var/www/html
 
 RUN unzip shapel.zip && \
-    cp -rvf * . && \
-    rm -rf shapel.zip *
+    mv shapel-html-*/* . && \
+    rm -rf shapel.zip shapel-html-*
+
 
 EXPOSE 80
 
