@@ -3,4 +3,4 @@ IMAGE_NAME ?= my-app:latest
 
 # Build rule
 build:
-	docker	build -t $(IMAGE_NAME) .
+	docker build -t $(IMAGE_NAME) .
