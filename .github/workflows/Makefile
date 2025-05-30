@@ -1,2 +1,4 @@
+IMAGE_NAME ?= my-app:latest
+
 build:
-	docker build -t my-app:latest .
+	docker build -t $(IMAGE_NAME) .
